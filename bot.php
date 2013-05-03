@@ -13,8 +13,9 @@ $conn = new TwitterOAuth(CONSUMER_KEY, CONSUMER_SECRET, ACCESS_TOKEN, ACCESS_TOK
 
 
 // status update
+$date = date("Y-m-d H:i:s");
 $param = array(
-	"status" => "Twitter Bot を cron で走らせるテスト中なり..."
+	"status" => "{$date} Twitter Bot を cron で走らせるテスト中なり..."
 );
 $result = $conn->post('statuses/update', $param);
 
